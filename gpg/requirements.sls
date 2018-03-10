@@ -1,12 +1,14 @@
-# assumes pip is installed
+{% from "gpg/map.jinja" import gpg with context %}
+
+install-prereqs:
+  pkg.installed:
+    - pkgs: {{ gpg.packages }}
+    - refresh: True
+
 install-pip-deps:
   pip.installed:
     - names:
       - python-gnupg
     - reload_modules: True
-
-install-prereqs:
-  pkg.installed:
-    - pkgs:
-      - rng-tools
-    - refresh: True
+    - require:
+      - install-prereqs
