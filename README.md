@@ -28,10 +28,7 @@ salt-call pillar.item gpg
 ## Setup
 
 ```bash
-salt-call -l debug state.apply gpg.deps
-# salt-call -l debug state.apply gpg.setup
-
-python /opt/gpg-gen-key.py
+salt-call -l debug state.sls gpg
 
 # verify key was created
 salt-call gpg.list_keys gnupghome='/etc/salt/gpgkeys'

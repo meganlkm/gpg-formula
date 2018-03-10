@@ -1,0 +1,6 @@
+Debian:
+  packages: []
+
+RedHat:
+  packages:
+    - rng-tools
