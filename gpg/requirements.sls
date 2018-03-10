@@ -2,7 +2,7 @@
 
 install-prereqs:
   pkg.installed:
-    - pkgs: {{ gpg.packages }}
+    - pkgs: {{ gpg.packages | default([], true) }}
     - refresh: True
 
 install-pip-deps:
