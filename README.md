@@ -4,13 +4,7 @@
 ## Run a sandbox container
 
 ```bash
-docker run --rm -d \
-    -v $(pwd):/opt \
-    -v $(pwd)/pillar:/srv/pillar \
-    -v $(pwd)/gpg:/srv/salt/gpg \
-    -h salt-master-sandbox \
-    --name salt-master-sandbox \
-    simplyadrian/allsalt:centos_master_2017.7.2
+make sandbox
 ```
 
 #### shell into sandbox
@@ -20,8 +14,6 @@ docker exec -it salt-master-sandbox bash
 
 # verify key is accepted
 salt-key
-# verify pillar
-salt-call pillar.item gpg
 ```
 
 
