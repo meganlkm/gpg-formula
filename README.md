@@ -2,16 +2,18 @@
 
 # gpg-formula
 
-* [TODO](#todo)
+* [Description](#description)
 * [Sandbox](#sandbox)
 * [Testing](#testing)
 * [Resources](#resources)
+* [TODO](#todo)
 
 ---
 
-## <a name='todo'></a> TODO
 
-* function to encrypt something and write it to a template
+## <a name='description'></a> Description
+
+Install system requirements for gpg and create a key.
 
 
 ## <a name='sandbox'></a> Run a sandbox container
@@ -87,3 +89,7 @@ make setup
 
 * https://fabianlee.org/2016/10/18/saltstack-keeping-salt-pillar-data-encrypted-using-gpg/
 * https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/html/Security_Guide/sect-Security_Guide-Encryption-Using_the_Random_Number_Generator.html
+
+## <a name='todo'></a> TODO
+
+* function to encrypt something and write it to a template
